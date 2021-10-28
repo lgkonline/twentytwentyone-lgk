@@ -8,7 +8,7 @@ Description: Customized Twenty Twenty-One theme. Twenty Twenty-One is a blank ca
 Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 5.6
-Version: 2.1
+Version: 2.1.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyone
@@ -26,7 +26,7 @@ body { --body-bg: #f4f4f4; --body-bg-pill-mode: rgba(244, 244, 244, 0.8); --body
 
 body.light { --body-bg: #f4f4f4; --body-bg-pill-mode: rgba(244, 244, 244, 0.8); --body-bg-stronger: rgba(25, 25, 25, 0.1); --control-bg: rgba(25, 25, 25, 0.05); --body-color: rgba(25, 25, 25, 0.5); --front-color: #191919; --active-color: #3f3f3f; --primary-hover: #ff5d5d; --neumorphism-shadow-color: #e5e5e5; --neumorphism-light-color: white; }
 
-body.dark { --body-bg: #151d22; --body-bg-pill-mode: rgba(21, 29, 34, 0.8); --body-bg-stronger: rgba(255, 255, 255, 0.3); --control-bg: rgba(255, 255, 255, 0.15); --body-color: rgba(255, 255, 255, 0.5); --front-color: #ffffff; --active-color: rgba(255, 255, 255, 0.9); --primary-hover: #ffb0b0; --neumorphism-shadow-color: #090d0f; --neumorphism-light-color: #1f2a32; }
+body.dark, body.is-dark-theme { --body-bg: #151d22; --body-bg-pill-mode: rgba(21, 29, 34, 0.8); --body-bg-stronger: rgba(255, 255, 255, 0.3); --control-bg: rgba(255, 255, 255, 0.15); --body-color: rgba(255, 255, 255, 0.5); --front-color: #ffffff; --active-color: rgba(255, 255, 255, 0.9); --primary-hover: #ffb0b0; --neumorphism-shadow-color: #090d0f; --neumorphism-light-color: #1f2a32; }
 
 .container { padding: 0 calc(50% - 38rem); margin: 0 1rem; }
 

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*
 Theme Name: Twenty Twenty-One LGK
 Theme URI: https://wordpress.org/themes/twentytwentyone/
@@ -9,7 +8,7 @@ Description: Customized Twenty Twenty-One theme. Twenty Twenty-One is a blank ca
 Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 5.6
-Version: 2.0
+Version: 2.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyone
@@ -19,7 +18,61 @@ Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, 
 Twenty Twenty-One WordPress Theme, (C) 2020 WordPress.org
 Twenty Twenty-One is distributed under the terms of the GNU GPL.
 */
+:root { --global--color-dark-gray: #151d22; }
 
-:root {
-    --global--color-dark-gray: #151d22;
-}
+body { --body-bg: #f4f4f4; --body-bg-pill-mode: rgba(244, 244, 244, 0.8); --body-bg-stronger: rgba(25, 25, 25, 0.1); --control-bg: rgba(25, 25, 25, 0.05); --body-color: rgba(25, 25, 25, 0.5); --front-color: #191919; --active-color: #3f3f3f; --primary-hover: #ff5d5d; --neumorphism-shadow-color: #e5e5e5; --neumorphism-light-color: white; --primary-normal: #fba161; --secondary-normal: var(--body-bg-stronger); --secondary-hover: var(--front-color); --neumorphism-shadow: 35px 35px 63px var(--neumorphism-shadow-color), -35px -35px 63px var(--neumorphism-light-color); --neumorphism-shadow-sm: 8px 8px 16px var(--neumorphism-shadow-color), -4px -4px 16px var(--neumorphism-light-color); }
+
+@media (prefers-color-scheme: dark) { body { --body-bg: #151d22; --body-bg-pill-mode: rgba(21, 29, 34, 0.8); --body-bg-stronger: rgba(255, 255, 255, 0.3); --control-bg: rgba(255, 255, 255, 0.15); --body-color: rgba(255, 255, 255, 0.5); --front-color: #ffffff; --active-color: rgba(255, 255, 255, 0.9); --primary-hover: #ffb0b0; --neumorphism-shadow-color: #090d0f; --neumorphism-light-color: #1f2a32; } }
+
+body.light { --body-bg: #f4f4f4; --body-bg-pill-mode: rgba(244, 244, 244, 0.8); --body-bg-stronger: rgba(25, 25, 25, 0.1); --control-bg: rgba(25, 25, 25, 0.05); --body-color: rgba(25, 25, 25, 0.5); --front-color: #191919; --active-color: #3f3f3f; --primary-hover: #ff5d5d; --neumorphism-shadow-color: #e5e5e5; --neumorphism-light-color: white; }
+
+body.dark { --body-bg: #151d22; --body-bg-pill-mode: rgba(21, 29, 34, 0.8); --body-bg-stronger: rgba(255, 255, 255, 0.3); --control-bg: rgba(255, 255, 255, 0.15); --body-color: rgba(255, 255, 255, 0.5); --front-color: #ffffff; --active-color: rgba(255, 255, 255, 0.9); --primary-hover: #ffb0b0; --neumorphism-shadow-color: #090d0f; --neumorphism-light-color: #1f2a32; }
+
+.container { padding: 0 calc(50% - 38rem); margin: 0 1rem; }
+
+/* ------- */
+.header { display: flex; height: 140px; align-items: center; box-sizing: content-box; }
+
+.header > * { width: calc(50% - (140px / 2)); }
+
+.header-border { width: 100%; height: 6px; background-color: var(--body-bg-stronger); border-radius: 3px; }
+
+.header-nav { display: flex; justify-content: flex-start; flex-wrap: wrap; }
+
+.header-nav a { display: flex; align-items: center; font-weight: 600; height: 32px; margin-right: 1rem; color: var(--body-color); text-decoration: none; border-bottom: 2px solid transparent; transition: border-color .2s; }
+
+.header-nav a:hover { color: var(--front-color); }
+
+.header-nav a.active { color: var(--active-color); border-color: currentColor; }
+
+.header-logo { width: 140px; font-size: 52px; text-align: center; }
+
+.header-logo a, .header-logo a:hover, .header-logo a:focus, .header-logo a:active { color: var(--front-color); text-decoration: none; }
+
+@media (hover: hover) { .header-logo a:hover .lgk-logo { background-color: var(--secondary-normal); box-shadow: var(--secondary-normal) 0 0 1rem; } }
+
+.header-social { display: flex; justify-content: flex-end; flex-wrap: wrap; }
+
+.header-social a { display: flex; justify-content: center; align-items: center; color: var(--front-color); text-decoration: none; width: 32px; height: 32px; font-size: 1.2rem; border-radius: 50%; transition: all .2s; position: relative; }
+
+.header-social a:hover { background-color: var(--front-color); color: var(--body-bg); }
+
+.header-social a small { font-size: .5em; position: absolute; right: .25rem; bottom: .25rem; background-color: var(--front-color); color: var(--body-bg); display: inline-block; border-radius: .25rem; box-shadow: 0 0 2px currentColor; }
+
+/* ------- */
+.lgk-logo { font-size: 52px; display: inline-flex; padding: 0; line-height: 1; border-radius: 50%; align-items: center; justify-content: center; overflow: hidden; -webkit-transform: translate3d(0, 0, 0); transition: all .2s; }
+
+@keyframes logo-zoom { 0%, 50% { transform: scale(6);
+    opacity: 0; } }
+
+.lgk-logo svg { transform: scale(1); animation: logo-zoom 1s linear; opacity: 1; }
+
+.header { margin-bottom: 48px; font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 16px; }
+
+.header a:focus { color: inherit !important; background-color: inherit !important; }
+
+.header { margin-bottom: 48px; font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 16px; }
+
+.header a:focus { color: inherit !important; background-color: inherit !important; }
+
+.lgk-logo svg { animation: none; }

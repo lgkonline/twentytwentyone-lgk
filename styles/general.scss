@@ -1,0 +1,106 @@
+/* ------- */
+
+.header {
+    display: flex;
+    height: 140px;
+    align-items: center;
+    box-sizing: content-box;
+
+    > * {
+        width: calc(50% - (140px / 2));
+    }
+}
+
+.header-border {
+    width: 100%;
+    height: 6px;
+    background-color: var(--body-bg-stronger);
+    border-radius: 3px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    a {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        height: 32px;
+        margin-right: 1rem;
+
+        color: var(--body-color);
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-color .2s;
+
+        &:hover {
+            color: var(--front-color);
+        }
+
+        &.active {
+            color: var(--active-color);
+            border-color: currentColor;
+        }
+    }
+}
+
+.header-logo {
+    width: 140px;
+    font-size: 52px;
+    text-align: center;
+
+    a {
+        &, &:hover, &:focus, &:active {
+            color: var(--front-color);
+            text-decoration: none;
+        }
+
+        @media (hover: hover) {
+            &:hover .lgk-logo {
+                background-color: var(--secondary-normal);
+                box-shadow: var(--secondary-normal) 0 0 1rem;
+            }
+        }
+    }
+}
+
+.header-social {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--front-color);
+        text-decoration: none;
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        transition: all .2s;
+        position: relative;
+
+        &:hover {
+            background-color: var(--front-color);
+            color: var(--body-bg);
+        }
+
+        small {
+            font-size: .5em;
+            position: absolute;
+            right: .25rem;
+            bottom: .25rem;
+            background-color: var(--front-color);
+            color: var(--body-bg);
+            display: inline-block;
+            border-radius: .25rem;
+            box-shadow: 0 0 2px currentColor;
+        }
+    }
+}
+
+/* ------- */

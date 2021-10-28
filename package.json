@@ -1,0 +1,28 @@
+{
+  "name": "twentytwentyone-lgk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass style.scss style.css",
+    "build-css-for-production": "node-sass style.scss style.css --output-style compact",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "start": "npm run watch-css",
+    "build": "npm run build-css-for-production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lgkonline/twentytwentyone-lgk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lgkonline/twentytwentyone-lgk/issues"
+  },
+  "homepage": "https://github.com/lgkonline/twentytwentyone-lgk#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.14"
+  }
+}

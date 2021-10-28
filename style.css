@@ -8,7 +8,7 @@ Description: Customized Twenty Twenty-One theme. Twenty Twenty-One is a blank ca
 Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 5.6
-Version: 2.1.2
+Version: 2.2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyone
@@ -18,7 +18,7 @@ Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, 
 Twenty Twenty-One WordPress Theme, (C) 2020 WordPress.org
 Twenty Twenty-One is distributed under the terms of the GNU GPL.
 */
-:root { --global--color-dark-gray: #151d22; }
+:root { --global--color-dark-gray: #151d22; --heading--font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; }
 
 body { --body-bg: #f4f4f4; --body-bg-pill-mode: rgba(244, 244, 244, 0.8); --body-bg-stronger: rgba(25, 25, 25, 0.1); --control-bg: rgba(25, 25, 25, 0.05); --body-color: rgba(25, 25, 25, 0.5); --front-color: #191919; --active-color: #3f3f3f; --primary-hover: #ff5d5d; --neumorphism-shadow-color: #e5e5e5; --neumorphism-light-color: white; --primary-normal: #fba161; --secondary-normal: var(--body-bg-stronger); --secondary-hover: var(--front-color); --neumorphism-shadow: 35px 35px 63px var(--neumorphism-shadow-color), -35px -35px 63px var(--neumorphism-light-color); --neumorphism-shadow-sm: 8px 8px 16px var(--neumorphism-shadow-color), -4px -4px 16px var(--neumorphism-light-color); }
 
@@ -71,8 +71,10 @@ body.dark, body.is-dark-theme { --body-bg: #151d22; --body-bg-pill-mode: rgba(21
 
 .header a:focus { color: inherit !important; background-color: inherit !important; }
 
-.header { margin-bottom: 48px; font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 16px; }
+.header { margin-bottom: 48px; font-family: var(--heading--font-family); font-size: 16px; }
 
 .header a:focus { color: inherit !important; background-color: inherit !important; }
 
 .lgk-logo svg { animation: none; }
+
+@media only screen and (min-width: 822px) { .alignwide { max-width: 74rem; } }

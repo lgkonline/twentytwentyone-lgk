@@ -18,8 +18,8 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
         <div class="header-nav">
             <a href="https://lgk.io/">Start</a>
             <a class="active" aria-current="page" href="<?php echo get_home_url(); ?>" target="_top">Blog</a>
-            <a href="https://lgk.io/projects">Projekte</a>
-            <a href="https://lgk.io/about-me">Über mich</a>
+            <a href="https://lgk.io/site/projects">Projekte</a>
+            <a href="https://lgk.io/site/about-me">Über mich</a>
         </div>
         
         <div class="header-logo">

@@ -8,7 +8,7 @@ Description: Customized Twenty Twenty-One theme. Twenty Twenty-One is a blank ca
 Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 5.6
-Version: 2.2.4
+Version: 2.2.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyone
@@ -67,6 +67,8 @@ body.dark, body.is-dark-theme { --body-bg: #151d22; --body-bg-pill-mode: rgba(21
 
 .lgk-logo svg { transform: scale(1); animation: logo-zoom 1s linear; opacity: 1; }
 
+.from-lgk .lgk-logo svg { animation: none; }
+
 .header { margin-bottom: 48px; font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 16px; }
 
 .header a:focus { color: inherit !important; background-color: inherit !important; }
@@ -74,8 +76,6 @@ body.dark, body.is-dark-theme { --body-bg: #151d22; --body-bg-pill-mode: rgba(21
 .header { margin-bottom: 48px; font-family: var(--heading--font-family); font-size: 16px; }
 
 .header a:focus { color: inherit !important; background-color: inherit !important; }
-
-.lgk-logo svg { animation: none; }
 
 @media only screen and (min-width: 822px) { .alignwide { max-width: 74rem; } }
 

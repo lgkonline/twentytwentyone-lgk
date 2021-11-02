@@ -25,6 +25,11 @@
     opacity: 1;
 }
 
+// No animation when user is coming from other LGK page (Blog)
+.from-lgk .lgk-logo svg {
+    animation: none;
+}
+
 .header {
     margin-bottom: 48px;
     font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;

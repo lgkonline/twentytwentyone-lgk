@@ -16,6 +16,8 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 <div class="container">
     <header class="header">
         <div class="header-nav">
+            <div id="lgk-react-app"></div>
+
             <a href="https://lgk.io/site/from-lgk/">Start</a>
             <a class="active" aria-current="page" href="<?php echo get_home_url(); ?>" target="_top">Blog</a>
             <a href="https://lgk.io/site/from-lgk/projects">Projekte</a>

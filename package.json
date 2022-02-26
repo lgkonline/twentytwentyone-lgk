@@ -7,8 +7,10 @@
     "build-css": "node-sass style.scss style.css",
     "build-css-for-production": "node-sass style.scss style.css --output-style compact",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "watch-js": "npx babel --watch src --out-dir scripts --presets react-app/prod",
+    "build-js": "npx babel src --out-dir scripts --presets react-app/prod",
     "start": "npm run watch-css",
-    "build": "npm run build-css-for-production"
+    "build": "npm run build-css-for-production && npm run build-js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,9 @@
   "devDependencies": {
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
   }
 }

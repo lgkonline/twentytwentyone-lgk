@@ -19,6 +19,9 @@ function twentytwentyone_styles() {
     wp_enqueue_style('lgk-icons', 'https://lib.lgkonline.com/lgk-icons/style.min.css?version=1.4.12');
     wp_enqueue_style('hk-grotesk-font', 'https://lib.lgkonline.com/webfont/stylesheet.min.css');
     wp_enqueue_script('lgk-script', get_stylesheet_directory_uri() . '/scripts/lgk-script.js', null, null, true);
+    wp_enqueue_script('react', get_stylesheet_directory_uri() . '/scripts/react.production.js', null, null, true);
+    wp_enqueue_script('react-dom', get_stylesheet_directory_uri() . '/scripts/react-dom.production.js', null, null, true);
+    wp_enqueue_script('lgk-react', get_stylesheet_directory_uri() . '/scripts/lgk-react.js', null, null, true);
 }
 
 add_action( 'wp_enqueue_scripts', 'twentytwentyone_styles');

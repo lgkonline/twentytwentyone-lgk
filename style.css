@@ -8,7 +8,7 @@ Description: Customized Twenty Twenty-One theme. Twenty Twenty-One is a blank ca
 Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 5.6
-Version: 2.2.6
+Version: 2.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyone
@@ -18,7 +18,9 @@ Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, 
 Twenty Twenty-One WordPress Theme, (C) 2020 WordPress.org
 Twenty Twenty-One is distributed under the terms of the GNU GPL.
 */
-:root { --global--color-dark-gray: #151d22; --global--font-size-page-title: 3.75rem; --heading--font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; --heading--font-weight-page-title: 700; --button--border-radius: 4rem; --form--border-radius: 3px; }
+:root { --global--color-dark-gray: #151d22; --global--font-size-page-title: 3.75rem; --heading--font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif; --heading--font-weight-page-title: 700; --button--border-radius: 4rem; --form--border-radius: 3px; }
 
 body { --body-bg: #f4f4f4; --body-bg-pill-mode: rgba(244, 244, 244, 0.8); --body-bg-stronger: rgba(25, 25, 25, 0.1); --control-bg: rgba(25, 25, 25, 0.05); --body-color: rgba(25, 25, 25, 0.5); --front-color: #191919; --active-color: #3f3f3f; --primary-hover: #ff5d5d; --neumorphism-shadow-color: #e5e5e5; --neumorphism-light-color: white; --primary-normal: #fba161; --secondary-normal: var(--body-bg-stronger); --secondary-hover: var(--front-color); --neumorphism-shadow: 35px 35px 63px var(--neumorphism-shadow-color), -35px -35px 63px var(--neumorphism-light-color); --neumorphism-shadow-sm: 8px 8px 16px var(--neumorphism-shadow-color), -4px -4px 16px var(--neumorphism-light-color); }
 
@@ -28,7 +30,100 @@ body.light, body.is-light-theme { --body-bg: #f4f4f4; --body-bg-pill-mode: rgba(
 
 body.dark, body.is-dark-theme { --body-bg: #151d22; --body-bg-pill-mode: rgba(21, 29, 34, 0.8); --body-bg-stronger: rgba(255, 255, 255, 0.3); --control-bg: rgba(255, 255, 255, 0.15); --body-color: rgba(255, 255, 255, 0.5); --front-color: #ffffff; --active-color: rgba(255, 255, 255, 0.9); --primary-hover: #ffb0b0; --neumorphism-shadow-color: #090d0f; --neumorphism-light-color: #1f2a32; }
 
+* { box-sizing: border-box; }
+
+.text-center { text-align: center; }
+
+.text-dark { color: var(--front-color); }
+
+.text-normal-grey { color: #999999 !important; }
+
+.font-normal { font-size: 1rem; }
+
+.btn { border: none; cursor: pointer; display: inline-block; text-decoration: none; background-color: var(--primary-normal); color: var(--body-bg) !important; padding: 0.5rem 0.7rem; margin-bottom: 5px; border-radius: 4rem; transition: background-color 0.2s; }
+
+.btn:hover { background-color: var(--primary-hover); color: var(--body-bg) !important; }
+
+.btn.secondary { background-color: var(--body-bg-stronger); color: var(--front-color) !important; }
+
+.btn.secondary:hover { background-color: var(--front-color); color: var(--body-bg) !important; }
+
+.btn:active { background-color: var(--secondary-hover) !important; }
+
+.btn:focus { outline: none; box-shadow: 0 0 0 0.1rem var(--primary-normal); }
+
+.lg { padding: 0.8rem 1rem; }
+
 .container { padding: 0 calc(50% - 38rem); margin: 0 1rem; }
+
+.container-fluid { padding: 1rem; }
+
+.animation-spin { display: inline-block; animation: spinAnimation 1s infinite linear; }
+
+@keyframes spinAnimation { 0% { transform: rotate(0deg);
+    color: #fba161; }
+  100% { transform: rotate(359deg);
+    color: #3f3f3f; } }
+
+.appear { animation: appear 0.5s; }
+
+.appear-1s { animation: appear 1s; }
+
+@keyframes appear { from { opacity: 0; } }
+
+.fade-opacity-from-100-to-70 { animation: fade-opacity-from-100-to-70 0.5s; }
+
+@keyframes fade-opacity-from-100-to-70 { from { opacity: 1; }
+  to { opacity: 0.7; } }
+
+.form-group { margin-bottom: 2rem; }
+
+.form-control { display: block; width: 100%; border: none; border-radius: 3px; background-color: var(--control-bg); color: var(--body-color); box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1); }
+
+.form-control:focus { outline: none; box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1), inset 0 -2px var(--primary-normal); }
+
+.mt-1, .my-1 { margin-top: 50px; }
+
+.mb-1, .my-1 { margin-bottom: 50px; }
+
+.mt-2, .my-2, .m-2 { margin-top: 100px; }
+
+.mb-2, .my-2, .m-2 { margin-bottom: 100px; }
+
+.ml-2, .m-2 { margin-left: 100px; }
+
+.mr-2, .m-2 { margin-right: 100px; }
+
+.ml-auto, .mx-auto { margin-left: auto; }
+
+.mr-auto, .mx-auto { margin-right: auto; }
+
+.w-100 { width: 100%; }
+
+.d-block { display: block !important; }
+
+.d-inline { display: inline !important; }
+
+window { scroll-behavior: smooth; }
+
+@media screen and (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+body { font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; line-height: 1.5; margin: 0; background-color: var(--body-bg); color: var(--body-color); }
+
+body.pill-mode { background-color: var(--body-bg-pill-mode); }
+
+button, input, textarea { font: inherit; color: inherit; line-height: 1rem; }
+
+a { color: inherit; transition: color 0.2s; text-decoration: none; }
+
+a:hover { color: var(--primary-normal); }
+
+.link-area a:not(.present-link):not(.btn):not(.no-dotted), .page a:not(.present-link):not(.btn):not(.no-dotted) { border-bottom: 1px dotted; }
+
+.link-area a:not(.present-link):not(.btn):not(.no-dotted):hover, .page a:not(.present-link):not(.btn):not(.no-dotted):hover { border-bottom: 1px solid; }
+
+/* ------- */
+h1, h2, h3 { color: var(--front-color); font-weight: 700; line-height: 1.2; }
 
 /* ------- */
 .header { display: flex; height: 140px; align-items: center; box-sizing: content-box; }
@@ -39,7 +134,7 @@ body.dark, body.is-dark-theme { --body-bg: #151d22; --body-bg-pill-mode: rgba(21
 
 .header-nav { display: flex; justify-content: flex-start; flex-wrap: wrap; }
 
-.header-nav a { display: flex; align-items: center; font-weight: 600; height: 32px; margin-right: 1rem; color: var(--body-color); text-decoration: none; border-bottom: 2px solid transparent; transition: border-color .2s; }
+.header-nav a { display: flex; align-items: center; font-weight: 600; height: 32px; margin-right: 1rem; color: var(--body-color); text-decoration: none; border-bottom: 2px solid transparent; transition: border-color 0.2s; }
 
 .header-nav a:hover { color: var(--front-color); }
 
@@ -51,15 +146,33 @@ body.dark, body.is-dark-theme { --body-bg: #151d22; --body-bg-pill-mode: rgba(21
 
 @media (hover: hover) { .header-logo a:hover .lgk-logo { background-color: var(--secondary-normal); box-shadow: var(--secondary-normal) 0 0 1rem; } }
 
+.header-icon-link, .header-social a { all: unset; display: flex; justify-content: center; align-items: center; color: var(--front-color); text-decoration: none; width: 32px; height: 32px; font-size: 1.2rem; border-radius: 50%; transition: all 0.2s; position: relative; border: none; cursor: pointer; background-color: transparent; }
+
+.header-icon-link:hover, .header-social a:hover { background-color: var(--front-color); color: var(--body-bg); }
+
+.header-icon-link small, .header-social a small { font-size: 0.5em; position: absolute; right: 0.25rem; bottom: 0.25rem; background-color: var(--front-color); color: var(--body-bg); display: inline-block; border-radius: 0.25rem; box-shadow: 0 0 2px currentColor; }
+
 .header-social { display: flex; justify-content: flex-end; flex-wrap: wrap; }
 
-.header-social a { display: flex; justify-content: center; align-items: center; color: var(--front-color); text-decoration: none; width: 32px; height: 32px; font-size: 1.2rem; border-radius: 50%; transition: all .2s; position: relative; }
-
-.header-social a:hover { background-color: var(--front-color); color: var(--body-bg); }
-
-.header-social a small { font-size: .5em; position: absolute; right: .25rem; bottom: .25rem; background-color: var(--front-color); color: var(--body-bg); display: inline-block; border-radius: .25rem; box-shadow: 0 0 2px currentColor; }
+/* ------- */
+.page { animation: appear 0.5s; }
 
 /* ------- */
+.masthead { padding: 48px 0 100px 0; text-align: center; }
+
+.masthead h1 { margin-top: 1rem; font-size: 60px; }
+
+.masthead p { font-size: 20px; white-space: pre-wrap; }
+
+.title { font-size: 36px; color: var(--front-color); font-weight: 700; }
+
+.footer { padding: 100px 0; text-align: center; }
+
+/* ------- */
+.form { padding: 0 calc(50% - 18rem); }
+
+label { font-weight: 600; display: inline-block; max-width: 100%; margin-bottom: 5px; }
+
 .lgk-logo { font-size: 52px; display: inline-flex; padding: 0; line-height: 1; border-radius: 50%; align-items: center; justify-content: center; overflow: hidden; -webkit-transform: translate3d(0, 0, 0); transition: all .2s; }
 
 @keyframes logo-zoom { 0%, 50% { transform: scale(6);
@@ -72,6 +185,36 @@ body.dark, body.is-dark-theme { --body-bg: #151d22; --body-bg-pill-mode: rgba(21
 .header { margin-bottom: 48px; font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; font-size: 16px; }
 
 .header a:focus { color: inherit !important; background-color: inherit !important; }
+
+.search-area .search-toggle { margin-right: 1rem; }
+
+.search-area .search-underlay { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 80; display: block; cursor: default; content: " "; }
+
+.search-area .dialog { position: absolute; top: 2.6rem; z-index: 100; width: 400px; border-radius: 0.5rem; background-color: var(--body-bg); box-sizing: border-box; border-radius: 4rem; box-shadow: var(--neumorphism-shadow); }
+
+.search-area form { display: flex; align-items: center; gap: 0.5rem; }
+
+.search-area form input { all: unset; display: block; width: 100%; border: none; border-radius: 3px; background-color: var(--control-bg); color: var(--body-color); box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1); border-radius: 4rem; padding: 0.8rem 1rem; padding-left: 4rem; padding-right: 4rem; background: var(--control-bg) !important; }
+
+.search-area form input:focus { outline: none; box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.1), inset 0 -2px var(--primary-normal); }
+
+.search-area form input:focus { color: var(--body-color) !important; }
+
+.search-area form .search-close, .search-area form .search-submit { all: unset; position: absolute; top: 50%; transform: translateY(-50%); border: none; cursor: pointer; display: inline-block; text-decoration: none; background-color: var(--primary-normal); color: var(--body-bg) !important; padding: 0.5rem 0.7rem; margin-bottom: 5px; border-radius: 4rem; transition: background-color 0.2s; }
+
+.search-area form .search-close:hover, .search-area form .search-submit:hover { background-color: var(--primary-hover); color: var(--body-bg) !important; }
+
+.search-area form .search-close.secondary, .search-area form .search-submit.secondary { background-color: var(--body-bg-stronger); color: var(--front-color) !important; }
+
+.search-area form .search-close.secondary:hover, .search-area form .search-submit.secondary:hover { background-color: var(--front-color); color: var(--body-bg) !important; }
+
+.search-area form .search-close:active, .search-area form .search-submit:active { background-color: var(--secondary-hover) !important; }
+
+.search-area form .search-close:focus, .search-area form .search-submit:focus { outline: none; box-shadow: 0 0 0 0.1rem var(--primary-normal); }
+
+.search-area form .search-close.secondary { left: 0.25rem; background-color: transparent; }
+
+.search-area form .search-submit { right: 0.25rem; }
 
 .header { margin-bottom: 48px; font-family: var(--heading--font-family); font-size: 16px; }
 

@@ -9,7 +9,7 @@ Description: Customized Twenty Twenty-One theme. Twenty Twenty-One is a blank ca
 Requires at least: 5.3
 Tested up to: 5.8
 Requires PHP: 5.6
-Version: 2.2.6
+Version: 2.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Template: twentytwentyone
@@ -23,12 +23,13 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 :root {
     --global--color-dark-gray: #151d22;
     --global--font-size-page-title: 3.75rem;
-    --heading--font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --heading--font-family: "HK Grotesk", -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
     --heading--font-weight-page-title: 700;
     --button--border-radius: 4rem;
     --form--border-radius: 3px;
 }
-
 
 // Styles in ./styles wurden direkt aus lgk.io/site übernommen.
 // Um Styles zwischen blog.lgk.io und lgk.io gleich zu halten, sollten diese Dateien
@@ -39,15 +40,16 @@ Twenty Twenty-One is distributed under the terms of the GNU GPL.
 @import "styles/helper.scss";
 @import "styles/general.scss";
 @import "styles/lgk-logo.scss";
+@import "styles/search.scss";
 
 .header {
     margin-bottom: 48px;
     font-family: var(--heading--font-family);
-    font-size: 16px; 
+    font-size: 16px;
 
     a:focus {
         color: inherit !important;
-        background-color: inherit !important; 
+        background-color: inherit !important;
     }
 }
 

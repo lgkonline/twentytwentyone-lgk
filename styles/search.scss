@@ -19,12 +19,18 @@
         position: absolute;
         top: 2.6rem;
         z-index: 100;
-        width: 400px;
+        width: calc(100% - 2rem);
         border-radius: 0.5rem;
         background-color: var(--body-bg);
         box-sizing: border-box;
         border-radius: 4rem;
         box-shadow: var(--neumorphism-shadow);
+    }
+
+    @media (min-width: 768px) {
+        .dialog {
+            width: 400px;
+        }
     }
 
     form {

@@ -39,12 +39,14 @@ if (isset($behance_projects) && is_array($behance_projects) && count($behance_pr
                 <a href="https://lgk.io/site/projects/<?php echo $project->id; ?>"><?php echo $project->name; ?></a>
             </h2>
 
-            <figure class="wp-block-image size-large">
-                <a href="https://lgk.io/site/projects/<?php echo $project->id; ?>">
-                    <img loading="lazy" width="1024" height="680" src="<?php echo $project->covers->{"115"} ?>" 
-                        srcset="<?php echo lgk_get_srcset($project->covers); ?>" sizes="(max-width: 1024px) 100vw, 1024px">
-                </a>
-            </figure>
+            <div class="entry-content">
+                <figure class="wp-block-image size-large">
+                    <a href="https://lgk.io/site/projects/<?php echo $project->id; ?>">
+                        <img loading="lazy" width="1024" height="680" src="<?php echo $project->covers->{"115"} ?>" 
+                            srcset="<?php echo lgk_get_srcset($project->covers); ?>" sizes="(max-width: 1024px) 100vw, 1024px">
+                    </a>
+                </figure>
+            </div>
         </article>
     <?php endforeach; 
 }
